@@ -56,15 +56,39 @@
 		84DA59FD28FF260D00806F44 /* Avito Trainee */ = {
 			isa = PBXGroup;
 			children = (
+				84DA5A1728FF28F600806F44 /* App */,
+				84DA5A1828FF28FE00806F44 /* Screens */,
+				84DA5A1928FF290700806F44 /* Sources */,
+			);
+			path = "Avito Trainee";
+			sourceTree = "<group>";
+		};
+		84DA5A1728FF28F600806F44 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				84DA59FE28FF260D00806F44 /* AppDelegate.swift */,
 				84DA5A0028FF260D00806F44 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		84DA5A1828FF28FE00806F44 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
 				84DA5A0228FF260D00806F44 /* ViewController.swift */,
 				84DA5A0428FF260D00806F44 /* Main.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		84DA5A1928FF290700806F44 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
 				84DA5A0728FF260F00806F44 /* Assets.xcassets */,
 				84DA5A0928FF260F00806F44 /* LaunchScreen.storyboard */,
 				84DA5A0C28FF260F00806F44 /* Info.plist */,
 			);
-			path = "Avito Trainee";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7HBA82XQ29;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Avito Trainee/Info.plist";
+				INFOPLIST_FILE = "Avito Trainee/Sources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7HBA82XQ29;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Avito Trainee/Info.plist";
+				INFOPLIST_FILE = "Avito Trainee/Sources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
