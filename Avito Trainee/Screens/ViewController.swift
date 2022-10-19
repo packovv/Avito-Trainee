@@ -9,9 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var welcomeForView: Welcome?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NetworkManager.shared.fetchData(from: Link.testApi.rawValue) { result in
+            switch result {
+            case .success(let welcome):
+                self.welcomeForView = welcome
+                print("Success")
+                print(welcome)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
