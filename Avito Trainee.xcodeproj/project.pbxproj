@@ -14,6 +14,7 @@
 		84DA5A0828FF260F00806F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DA5A0728FF260F00806F44 /* Assets.xcassets */; };
 		84DA5A0B28FF260F00806F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DA5A0928FF260F00806F44 /* LaunchScreen.storyboard */; };
 		84DA5A1B28FF29F900806F44 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA5A1A28FF29F900806F44 /* Welcome.swift */; };
+		84DA5A1E28FF2B0600806F44 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA5A1D28FF2B0600806F44 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		84DA5A0A28FF260F00806F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DA5A0C28FF260F00806F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DA5A1A28FF29F900806F44 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		84DA5A1D28FF2B0600806F44 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				84DA5A1728FF28F600806F44 /* App */,
 				84DA5A1C28FF29FE00806F44 /* Models */,
 				84DA5A1828FF28FE00806F44 /* Screens */,
+				84DA5A1F28FF2B1400806F44 /* Services */,
 				84DA5A1928FF290700806F44 /* Sources */,
 			);
 			path = "Avito Trainee";
@@ -100,6 +103,14 @@
 				84DA5A1A28FF29F900806F44 /* Welcome.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		84DA5A1F28FF2B1400806F44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84DA5A1D28FF2B0600806F44 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			files = (
 				84DA5A1B28FF29F900806F44 /* Welcome.swift in Sources */,
 				84DA5A0328FF260D00806F44 /* ViewController.swift in Sources */,
+				84DA5A1E28FF2B0600806F44 /* NetworkManager.swift in Sources */,
 				84DA59FF28FF260D00806F44 /* AppDelegate.swift in Sources */,
 				84DA5A0128FF260D00806F44 /* SceneDelegate.swift in Sources */,
 			);
