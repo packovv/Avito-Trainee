@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.fetchData(from: Link.testApi.rawValue) { result in
+        NetworkManager.shared.fetchData(from: Link.json.rawValue) { result in
             switch result {
             case .success(let welcome):
                 self.welcomeForView = welcome
