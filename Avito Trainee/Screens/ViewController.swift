@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         setupUI()
         fetchData(with: Link.json.rawValue)
+//        welcomeForView?.company.employees.sort()
     }
     
     private func setupUI() {
@@ -57,6 +58,7 @@ class ViewController: UITableViewController {
                 switch result {
                 case .success(let welcome):
                     self.welcomeForView = welcome
+                    self.welcomeForView?.company.employees.sort(by: <)
                     print("Success")
                     print(welcome)
                 case .failure(let error):
