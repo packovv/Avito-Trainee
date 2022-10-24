@@ -22,7 +22,32 @@ class ViewController: UITableViewController {
     private func setupUI() {
         self.tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
         self.tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.reuseId)
-        navigationItem.title = "Company"
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        title = "Company"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = UIColor(
+            displayP3Red: 111/255,
+            green: 101/255,
+            blue: 192/255,
+            alpha: 194/255
+        )
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .search,
+            target: self,
+            action: #selector(sendRequest)
+        )
+        
+        navigationController?.navigationBar.tintColor = .white
     }
     
     private func fetchData(with url: String) {
@@ -36,6 +61,7 @@ class ViewController: UITableViewController {
                     print(welcome)
                 case .failure(let error):
                     print(error)
+                    self.showAlert(message: error)
                 }
                 self.tableView.reloadData()
                 self.activityIndicator.stopActivityIndicator(self.tableView)
@@ -43,9 +69,14 @@ class ViewController: UITableViewController {
         }
     }
     
+    @objc private func sendRequest() {
+        fetchData(with: Link.json.rawValue)
+    }
+    
     
 }
 
+// UITableView
 extension ViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,7 +113,14 @@ extension ViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    
+}
+
+// UIAlertController
+extension ViewController {
+    private func showAlert(message: NetworkError) {
+        let alert = UIAlertController.createAlertController(withMessage: message.localizedDescription)
+        alert.action()
+        present(alert, animated: true)
+    }
 }
 

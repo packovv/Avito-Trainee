@@ -11,7 +11,7 @@ class TableViewCell: UITableViewCell {
 
     static let reuseId: String = "cell"
     
-    private let nameLabel : UILabel = {
+    private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name: "
         label.textColor = .black
@@ -21,7 +21,7 @@ class TableViewCell: UITableViewCell {
         return label
     }()
     
-    private let phoneNumberLabel : UILabel = {
+    private let phoneNumberLabel: UILabel = {
         let label = UILabel()
         label.text = "Phone Number: "
         label.textColor = .black
@@ -31,7 +31,7 @@ class TableViewCell: UITableViewCell {
         return label
     }()
     
-    private let skillsLabel : UILabel = {
+    private let skillsLabel: UILabel = {
         let label = UILabel()
         label.text = "Skills: "
         label.textColor = .black
