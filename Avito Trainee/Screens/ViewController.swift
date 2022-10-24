@@ -93,6 +93,7 @@ extension ViewController {
         if indexPath.row != 0 {
             
             let commonCell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId, for: indexPath) as! TableViewCell
+            commonCell.selectionStyle = .none
             
             let currentEmployee = welcomeForView?.company.employees[indexPath.row - 1]
             commonCell.employee = currentEmployee
@@ -102,6 +103,7 @@ extension ViewController {
         } else {
             
             let titleCell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.reuseId, for: indexPath)
+            titleCell.selectionStyle = .none
 
             var content = titleCell.defaultContentConfiguration()
             content.text = welcomeForView?.company.name
