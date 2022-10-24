@@ -29,5 +29,11 @@ struct Employee: Codable {
 }
 
 enum Link: String {
-    case testApi = "https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c"
+    case json = "https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c"
+}
+
+extension Employee: Comparable {
+    static func < (lhs: Employee, rhs: Employee) -> Bool {
+        lhs.name < rhs.name
+    }
 }
