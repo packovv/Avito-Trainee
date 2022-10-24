@@ -9,21 +9,24 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    private let activityIndicator = ActivityIndicatorView()
+    
     private var welcomeForView: Welcome?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchData(with: Link.json.rawValue)
     }
     
     private func setupUI() {
         self.tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
         self.tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.reuseId)
         navigationItem.title = "Company"
-        fetchData(with: Link.json.rawValue)
     }
     
     private func fetchData(with url: String) {
+        activityIndicator.startActivityIndicator(tableView)
         NetworkManager.shared.fetchData(from: url) { result in
             DispatchQueue.main.async {
                 switch result {
@@ -35,11 +38,12 @@ class ViewController: UITableViewController {
                     print(error)
                 }
                 self.tableView.reloadData()
+                self.activityIndicator.stopActivityIndicator(self.tableView)
             }
         }
     }
-
-
+    
+    
 }
 
 extension ViewController {

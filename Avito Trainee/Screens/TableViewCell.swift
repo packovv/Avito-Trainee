@@ -94,8 +94,6 @@ class TableViewCell: UITableViewCell {
         name.anchor(top: topAnchor, left: nameLabel.rightAnchor, bottom: nil, right: rightAnchor, paddingTop: 10, paddingLeft: 16, paddingBottom: 10, paddingRight: 16, width: frame.size.width / 2, height: 0, enableInsets: false)
         phoneNumber.anchor(top: name.bottomAnchor, left: phoneNumberLabel.rightAnchor, bottom: nil, right: rightAnchor, paddingTop: 10, paddingLeft: 16, paddingBottom: 10, paddingRight: 16, width: frame.size.width / 2, height: 0, enableInsets: false)
         skills.anchor(top: phoneNumber.bottomAnchor, left: skillsLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 16, paddingBottom: 10, paddingRight: 16, width: frame.size.width / 2, height: 0, enableInsets: false)
-        
-        
      }
     
     required init?(coder: NSCoder) {
